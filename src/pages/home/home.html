@@ -3,10 +3,245 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>iFornite</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  
+<!-- segments -->
+<ion-toolbar no-border-top class="toolbarMode">
+  <ion-segment [(ngModel)]="mode">
+    <ion-segment-button value="solo">
+      Solo
+    </ion-segment-button>
+    <ion-segment-button value="duo">
+      Duo
+    </ion-segment-button>
+    <ion-segment-button value="squad">
+      Squad
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+<ion-content padding class="card-background-page" *ngIf="stats" no-bounce>
+
+  <!-- first card -->
+  <ion-card class="mainCard">
+    <img src="img/card1transparent.png" />
+    <div class="card-title">{{stats.displayName}}</div>
+    <div class="card-subtitle">Wins: {{stats.br.stats.pc.all.wins}}</div>
+    <div class="card-subtitle kdratio">K/D ratio: {{stats.br.stats.pc.all.kpd}}</div>
+    <div class="card-subtitle matchesPlayed">Matches played: {{stats.br.stats.pc.all.matchesPlayed}}</div>
+    <div class="accountLevel">{{stats.br.profile.level}}</div>
+    <div class="accountLevel accountLevel2">Account level</div>
+  </ion-card>
+
+
+  <!-- solo stats card -->
+  <div [ngSwitch]="mode">
+    <ion-card class="soloCard" *ngSwitchCase="'solo'">
+      <img src="img/card2transparent.png" />
+      <div class="card-title">Solo</div>
+      <ion-grid class="top3">
+        <ion-row class="winRow">
+          <ion-col>
+            <div>Wins:</div>
+            <div class="top3div">{{stats.br.stats.pc.solo.wins}}</div>
+          </ion-col>
+          <ion-col>
+            <div class="top3div">Top 10:</div>
+            <div class="top3div">{{stats.br.stats.pc.solo.top10}}</div>
+          </ion-col>
+          <ion-col>
+            <div class="top3div">Top 25:</div>
+            <div class="top3div">{{stats.br.stats.pc.solo.top25}}</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid class="soloStats">
+        <ion-row class="firstLineSolo">
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/killicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.kills}}</div>
+            <div class="iconDesc">Kills</div>
+          </ion-col>
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/deathicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.deaths}}</div>
+            <div class="iconDesc">Deaths</div>
+          </ion-col>
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/percentageicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.kpd}}</div>
+            <div class="iconDesc">K/D ratio</div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="secondLineSolo">
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/matchesicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.matchesPlayed}}</div>
+            <div class="iconDesc">Matches</div>
+          </ion-col>
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/ratioicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.winRate}} %</div>
+            <div class="iconDesc">Win ratio</div>
+          </ion-col>
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/minutesicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.minutesPlayed}}</div>
+            <div class="iconDesc">Minutes played</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <!-- duo stats card -->
+    <ion-card class="soloCard" *ngSwitchCase="'duo'">
+      <img src="img/card2transparent2.png" />
+      <div class="card-title">Duo</div>
+      <ion-grid class="top3">
+        <ion-row class="winRow">
+          <ion-col>
+            <div>Wins:</div>
+            <div class="top3div">{{stats.br.stats.pc.duo.wins}}</div>
+          </ion-col>
+          <ion-col>
+            <div class="top3div">Top 5:</div>
+            <div class="top3div">{{stats.br.stats.pc.duo.top5}}</div>
+          </ion-col>
+          <ion-col>
+            <div class="top3div">Top 12:</div>
+            <div class="top3div">{{stats.br.stats.pc.duo.top12}}</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid class="soloStats">
+        <ion-row class="firstLineSolo">
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/killicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.kills}}</div>
+            <div class="iconDesc">Kills</div>
+          </ion-col>
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/deathicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.deaths}}</div>
+            <div class="iconDesc">Deaths</div>
+          </ion-col>
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/percentageicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.kpd}}</div>
+            <div class="iconDesc">K/D ratio</div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="secondLineSolo">
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/matchesicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.matchesPlayed}}</div>
+            <div class="iconDesc">Matches</div>
+          </ion-col>
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/ratioicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.winRate}} %</div>
+            <div class="iconDesc">Win ratio</div>
+          </ion-col>
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/minutesicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.minutesPlayed}}</div>
+            <div class="iconDesc">Minutes played</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <!-- squad stats card -->
+    <ion-card class="soloCard" *ngSwitchCase="'squad'">
+      <img src="img/cardSquad.png" />
+      <div class="card-title">Squad</div>
+      <ion-grid class="top3">
+        <ion-row class="winRow">
+          <ion-col>
+            <div>Wins:</div>
+            <div class="top3div">{{stats.br.stats.pc.squad.wins}}</div>
+          </ion-col>
+          <ion-col>
+            <div class="top3div">Top 3:</div>
+            <div class="top3div">{{stats.br.stats.pc.squad.top3}}</div>
+          </ion-col>
+          <ion-col>
+            <div class="top3div">Top 6:</div>
+            <div class="top3div">{{stats.br.stats.pc.squad.top6}}</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid class="soloStats">
+        <ion-row class="firstLineSolo">
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/killicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.kills}}</div>
+            <div class="iconDesc">Kills</div>
+          </ion-col>
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/deathicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.deaths}}</div>
+            <div class="iconDesc">Deaths</div>
+          </ion-col>
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/percentageicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.kpd}}</div>
+            <div class="iconDesc">K/D ratio</div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="secondLineSolo">
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/matchesicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.matchesPlayed}}</div>
+            <div class="iconDesc">Matches</div>
+          </ion-col>
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/ratioicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.winRate}} %</div>
+            <div class="iconDesc">Win ratio</div>
+          </ion-col>
+          <ion-col>
+            <div class="iconContainer">
+              <img class="svgIcon" src="img/minutesicon.svg">
+            </div>
+            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.minutesPlayed}}</div>
+            <div class="iconDesc">Minutes played</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </div>
 </ion-content>

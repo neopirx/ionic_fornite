@@ -8,5 +8,19 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-grid class="searchBar">
+    <ion-row class="searchRow">
+      <ion-col width-100>
+        <form (ngSubmit)="saveForm()">
+          <ion-item>
+          <ion-label stacked class="searchLabel">
+            Nickname
+          </ion-label>
+          <ion-input class="searchForm" [(ngModel)]="nickname" name="nickname" type="text" stacked></ion-input>
+          </ion-item>
+          <button ion-button type="submit" color="light" light block>Search</button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

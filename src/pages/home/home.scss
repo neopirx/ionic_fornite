@@ -1,3 +1,128 @@
-page-home {
+@font-face {
+    font-family: 'Burbank';
+    src: url('BurbankBigCondensed-Bold.otf');
+}
 
+ion-card {
+    position: relative;
+    margin-top: 100px;
+}
+
+.mainCard {
+    margin-top: 6em;
+}
+
+.card-title {
+    position: absolute;
+    top: 0.8em;
+    font-size: 2.5em;
+    margin-left: 20px;
+    font-weight: bold;
+    color: yellow;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 400;
+}
+
+.card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 45%;
+    margin-left: 22px;
+    color: #fff;
+}
+
+.kdratio {
+    top: 60%;
+}
+
+.matchesPlayed {
+    top: 75%;
+}
+
+.accountLevel {
+    position: absolute;
+    top: 3.8em;
+    left: 68%;
+    font-size: 2.0em;
+    margin-left: 20px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 400;
+}
+
+.accountLevel2 {
+    font-size: 1.2em;
+    top: 76%;
+    font-weight: 100;
+    width: 100%;
+    left: 55%;
+}
+
+.soloCard .card-title {
+    color: #fff;
+}
+
+.top3 {
+    position: absolute;
+    color: #fff;
+    font-size: 1.6em;
+    top: 3.2em;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.top3div {
+    margin-top: 0.1em;
+}
+
+.soloStats {
+    position: absolute;
+    color: #fff;
+    font-size: 1.2em;
+    top: 7em;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.iconContainer {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.svgIcon {
+    position: absolute;
+    width: 2em;
+    margin: auto;
+    top: 2em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.iconDesc {
+    margin-top: 0.2em;
+}
+
+.soloStatsdiv {
+    margin-top: 2.4em;
+}
+
+.firstLineSolo {
+    margin-top: 2em;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.secondLineSolo {
+    margin-top: 0.4em;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.winRow {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.toolbarMode {
+    top: 3.5em;
 }

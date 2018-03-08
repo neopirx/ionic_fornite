@@ -10,15 +10,15 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class StatsProvider {
-  url= 'https://fortnite.y3n.co/v2/player/emulgator';
+  url= 'https://fortnite.y3n.co/v2/player/';
   apiKey = 'tlisV9TFbCqkwsYOnTfq';
 
   constructor(public http: HttpClient) {
     console.log('Hello StatsProvider Provider');
   }
 
-  getStats() {
+  getStats(nickname) {
     let headers = new HttpHeaders().set('X-Key', this.apiKey)
-    return this.http.get(this.url, {headers: headers})
+    return this.http.get(this.url + nickname, {headers: headers})
   }
 }

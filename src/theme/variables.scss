@@ -38,14 +38,31 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       white,
+  gradient1:  #355c7d,
+  gradient2:  #6c5b7b,
+  gradient3:  #c06c84,
+  gradient2_1: #667eea,
+  gradient2_2:  #764ba2
 );
+
+$app-background: linear-gradient(to bottom, color($colors, gradient2_2) 0%, color($colors, gradient2_1) 100%);
+$background-color: transparent;
+$toolbar-background: transparent;
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
+$segment-button-ios-background-color-activated: white;
+$segment-button-ios-toolbar-button-max-width: 120px;
 
+$text-input-ios-margin-start: 200px;
+$text-input-ios-highlight-color: color($colors, light);
+
+.label-ios {
+  color: white;
+}
 
 
 
