@@ -18,7 +18,7 @@
           </ion-label>
           <ion-input class="searchForm" [(ngModel)]="nickname" name="nickname" type="text" stacked></ion-input>
           </ion-item>
-          <button ion-button type="submit" color="light" light block>Search</button>
+          <button ion-button type="submit" color="light" (click)="presentToast()" light block>Update nickname</button>
         </form>
       </ion-col>
     </ion-row>

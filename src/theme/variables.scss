@@ -48,7 +48,7 @@ $colors: (
 
 $app-background: linear-gradient(to bottom, color($colors, gradient2_2) 0%, color($colors, gradient2_1) 100%);
 $background-color: transparent;
-$toolbar-background: transparent;
+$toolbar-background: color($colors, gradient2_2);
 
 
 // App iOS Variables
@@ -63,6 +63,9 @@ $text-input-ios-highlight-color: color($colors, light);
 .label-ios {
   color: white;
 }
+
+$toast-ios-background: rgba(255, 255, 255, 0.85);
+$toast-ios-title-color: black;
 
 
 

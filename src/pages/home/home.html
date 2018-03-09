@@ -39,23 +39,25 @@
   <div [ngSwitch]="mode">
     <ion-card class="soloCard" *ngSwitchCase="'solo'">
       <img src="img/card2transparent.png" />
+      <div class="top3container">
       <div class="card-title">Solo</div>
       <ion-grid class="top3">
-        <ion-row class="winRow">
-          <ion-col>
-            <div>Wins:</div>
-            <div class="top3div">{{stats.br.stats.pc.solo.wins}}</div>
-          </ion-col>
-          <ion-col>
-            <div class="top3div">Top 10:</div>
-            <div class="top3div">{{stats.br.stats.pc.solo.top10}}</div>
-          </ion-col>
-          <ion-col>
-            <div class="top3div">Top 25:</div>
-            <div class="top3div">{{stats.br.stats.pc.solo.top25}}</div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+          <ion-row class="winRow">
+            <ion-col>
+              <div class="top3title">Wins:</div>
+              <div class="top3div">{{stats.br.stats.pc.squad.wins}}</div>
+            </ion-col>
+            <ion-col>
+              <div class="top3title">Top 3:</div>
+              <div class="top3div">{{stats.br.stats.pc.squad.top3}}</div>
+            </ion-col>
+            <ion-col>
+              <div class="top3title">Top 6:</div>
+              <div class="top3div">{{stats.br.stats.pc.squad.top6}}</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </div>
       <ion-grid class="soloStats">
         <ion-row class="firstLineSolo">
           <ion-col>
@@ -105,26 +107,27 @@
         </ion-row>
       </ion-grid>
     </ion-card>
+
     <!-- duo stats card -->
     <ion-card class="soloCard" *ngSwitchCase="'duo'">
-      <img src="img/card2transparent2.png" />
+      <img src="img/card2transparent.png" />
       <div class="card-title">Duo</div>
       <ion-grid class="top3">
-        <ion-row class="winRow">
-          <ion-col>
-            <div>Wins:</div>
-            <div class="top3div">{{stats.br.stats.pc.duo.wins}}</div>
-          </ion-col>
-          <ion-col>
-            <div class="top3div">Top 5:</div>
-            <div class="top3div">{{stats.br.stats.pc.duo.top5}}</div>
-          </ion-col>
-          <ion-col>
-            <div class="top3div">Top 12:</div>
-            <div class="top3div">{{stats.br.stats.pc.duo.top12}}</div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+          <ion-row class="winRow">
+            <ion-col>
+              <div class="top3title">Wins:</div>
+              <div class="top3div">{{stats.br.stats.pc.squad.wins}}</div>
+            </ion-col>
+            <ion-col>
+              <div class="top3title">Top 3:</div>
+              <div class="top3div">{{stats.br.stats.pc.squad.top3}}</div>
+            </ion-col>
+            <ion-col>
+              <div class="top3title">Top 6:</div>
+              <div class="top3div">{{stats.br.stats.pc.squad.top6}}</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       <ion-grid class="soloStats">
         <ion-row class="firstLineSolo">
           <ion-col>
@@ -174,22 +177,23 @@
         </ion-row>
       </ion-grid>
     </ion-card>
+
     <!-- squad stats card -->
     <ion-card class="soloCard" *ngSwitchCase="'squad'">
-      <img src="img/cardSquad.png" />
+      <img src="img/card2transparent.png" />
       <div class="card-title">Squad</div>
       <ion-grid class="top3">
         <ion-row class="winRow">
           <ion-col>
-            <div>Wins:</div>
+            <div class="top3title">Wins:</div>
             <div class="top3div">{{stats.br.stats.pc.squad.wins}}</div>
           </ion-col>
           <ion-col>
-            <div class="top3div">Top 3:</div>
+            <div class="top3title">Top 3:</div>
             <div class="top3div">{{stats.br.stats.pc.squad.top3}}</div>
           </ion-col>
           <ion-col>
-            <div class="top3div">Top 6:</div>
+            <div class="top3title">Top 6:</div>
             <div class="top3div">{{stats.br.stats.pc.squad.top6}}</div>
           </ion-col>
         </ion-row>

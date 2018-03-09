@@ -25,7 +25,7 @@ export class HomePage {
   ionViewWillEnter(){
     this.storage.get('nickname').then((val) => {
       if(val != null) {
-        this.nickname = JSON.parse(val);
+        this.nickname = val;
         console.log('1');
       } else {
         this.nickname = 'Emulgator';

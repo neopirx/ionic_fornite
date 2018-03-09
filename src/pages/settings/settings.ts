@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { ToastController } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
 /**
@@ -20,6 +21,7 @@ export class SettingsPage {
   nickname: string;
 
   constructor(
+    public toastCtrl: ToastController,
     public navCtrl: NavController, 
     public navParams: NavParams, 
     private storage:Storage) {
@@ -40,8 +42,18 @@ export class SettingsPage {
 
   saveForm() {
     let nickname = this.nickname;
-    this.storage.set('nickname', JSON.stringify(nickname));
+    this.storage.set('nickname', nickname);
     console.log(nickname);
   }
+
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: 'Now showing stats for: ' + this.nickname,
+      duration: 3000,
+      position: 'top'
+    });
+    toast.present();
+  }
+
 
 }

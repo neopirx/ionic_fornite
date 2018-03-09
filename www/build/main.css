@@ -25256,7 +25256,7 @@ ion-toast {
   z-index: 10;
   display: block;
   max-width: 700px;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .toast-ios .toast-wrapper.toast-top {
@@ -25281,7 +25281,7 @@ ion-toast {
 
 .toast-ios .toast-message {
   font-size: 1.4rem;
-  color: #fff;
+  color: black;
   padding: 1.5rem;
 }
 
@@ -25999,7 +25999,7 @@ ion-navbar.toolbar {
 }
 
 .toolbar-background-ios {
-  background: transparent;
+  background: #764ba2;
 }
 
 .header-ios .toolbar-background-ios,
@@ -30753,7 +30753,7 @@ ion-navbar.toolbar {
 
 .toolbar-background-md {
   border-color: #b2b2b2;
-  background: transparent;
+  background: #764ba2;
 }
 
 .header-md::after,
@@ -35277,7 +35277,7 @@ ion-navbar.toolbar {
 
 .toolbar-background-wp {
   border-color: #b2b2b2;
-  background: transparent;
+  background: #764ba2;
 }
 
 .toolbar-content-wp {
@@ -39809,6 +39809,7 @@ ion-card {
 
 .mainCard {
   margin-top: 6em;
+  font-family: 'Luckiest Guy', cursive;
 }
 
 .card-title {
@@ -39823,7 +39824,7 @@ ion-card {
 }
 
 .card-subtitle {
-  font-size: 1.0em;
+  font-size: 1.2em;
   position: absolute;
   top: 45%;
   margin-left: 22px;
@@ -39845,34 +39846,46 @@ ion-card {
   font-size: 2.0em;
   margin-left: 20px;
   font-weight: bold;
-  color: #fff;
+  color: #FFE470;
   font-family: 'Luckiest Guy', cursive;
   font-weight: 400;
 }
 
 .accountLevel2 {
+  color: #FFE470;
   font-size: 1.2em;
-  top: 76%;
+  top: 8.25em;
   font-weight: 100;
   width: 100%;
   left: 55%;
 }
 
 .soloCard .card-title {
-  color: #fff;
+  color: #FF942E;
 }
 
 .top3 {
   position: absolute;
-  color: #fff;
   font-size: 1.6em;
   top: 3.2em;
   text-align: center;
   font-family: 'Luckiest Guy', cursive;
 }
 
+.top3container {
+  background-color: white;
+}
+
 .top3div {
   margin-top: 0.1em;
+  font-size: 1.2em;
+  color: white;
+}
+
+.top3title {
+  font-size: 1.3em;
+  margin-top: 0.1em;
+  color: yellow;
 }
 
 .soloStats {
@@ -39909,21 +39922,19 @@ ion-card {
 }
 
 .firstLineSolo {
-  margin-top: 2em;
-  background-color: rgba(0, 0, 0, 0.4);
+  margin-top: 3em;
 }
 
 .secondLineSolo {
-  margin-top: 0.4em;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.winRow {
-  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 1.5em;
 }
 
 .toolbarMode {
-  top: 3.5em;
+  top: 3em;
+}
+
+.soloCard {
+  backround-color: rgba(0, 0, 0, 0.1);
 }
 
 .searchLabel {
