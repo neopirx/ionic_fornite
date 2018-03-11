@@ -39867,7 +39867,7 @@ ion-card {
 .top3 {
   position: absolute;
   font-size: 1.6em;
-  top: 2.5em;
+  top: 3em;
   text-align: center;
   font-family: 'Luckiest Guy', cursive;
 }
@@ -39921,7 +39921,7 @@ ion-card {
 }
 
 .firstLineSolo {
-  margin-top: 2.5em;
+  margin-top: 5.5em;
 }
 
 .secondLineSolo {
