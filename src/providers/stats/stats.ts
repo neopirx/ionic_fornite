@@ -1,6 +1,8 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 /*
   Generated class for the StatsProvider provider.
@@ -13,7 +15,9 @@ export class StatsProvider {
   url= 'https://fortnite.y3n.co/v2/player/';
   apiKey = 'tlisV9TFbCqkwsYOnTfq';
 
-  constructor(public http: HttpClient) {
+  constructor(
+    public http: HttpClient
+  ) {
     console.log('Hello StatsProvider Provider');
   }
 

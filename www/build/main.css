@@ -39814,7 +39814,7 @@ ion-card {
 
 .card-title {
   position: absolute;
-  top: 0.8em;
+  top: 0.5em;
   font-size: 2.5em;
   margin-left: 20px;
   font-weight: bold;
@@ -39826,22 +39826,22 @@ ion-card {
 .card-subtitle {
   font-size: 1.2em;
   position: absolute;
-  top: 45%;
+  top: 3.2em;
   margin-left: 22px;
   color: #fff;
 }
 
 .kdratio {
-  top: 60%;
+  top: 4.7em;
 }
 
 .matchesPlayed {
-  top: 75%;
+  top: 6.2em;
 }
 
 .accountLevel {
   position: absolute;
-  top: 3.8em;
+  top: 2.8em;
   left: 68%;
   font-size: 2.0em;
   margin-left: 20px;
@@ -39854,7 +39854,7 @@ ion-card {
 .accountLevel2 {
   color: #FFE470;
   font-size: 1.2em;
-  top: 8.25em;
+  top: 6.2em;
   font-weight: 100;
   width: 100%;
   left: 55%;
@@ -39867,7 +39867,7 @@ ion-card {
 .top3 {
   position: absolute;
   font-size: 1.6em;
-  top: 3.2em;
+  top: 2.5em;
   text-align: center;
   font-family: 'Luckiest Guy', cursive;
 }
@@ -39884,7 +39884,6 @@ ion-card {
 
 .top3title {
   font-size: 1.3em;
-  margin-top: 0.1em;
   color: yellow;
 }
 
@@ -39892,7 +39891,7 @@ ion-card {
   position: absolute;
   color: #fff;
   font-size: 1.2em;
-  top: 7em;
+  top: 5.5em;
   text-align: center;
   font-family: 'Luckiest Guy', cursive;
 }
@@ -39922,11 +39921,11 @@ ion-card {
 }
 
 .firstLineSolo {
-  margin-top: 3em;
+  margin-top: 2.5em;
 }
 
 .secondLineSolo {
-  margin-top: 1.5em;
+  margin-top: 1em;
 }
 
 .toolbarMode {
@@ -39935,6 +39934,26 @@ ion-card {
 
 .soloCard {
   backround-color: rgba(0, 0, 0, 0.1);
+}
+
+.errorCard {
+  margin-top: 7em;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.errorTitle {
+  position: absolute;
+  top: 2em;
+  font-size: 2em;
+  margin-left: 20px;
+  font-weight: bold;
+  color: red;
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: 400;
+}
+
+.no-scroll .scroll-content {
+  overflow: hidden;
 }
 
 .searchLabel {

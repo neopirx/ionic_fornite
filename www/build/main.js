@@ -1,13 +1,16 @@
 webpackJsonp([2],{
 
-/***/ 102:
+/***/ 103:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_stats_stats__ = __webpack_require__(80);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -21,6 +24,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
  * Generated class for the SettingsPage page.
  *
@@ -28,9 +33,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var SettingsPage = (function () {
-    function SettingsPage(toastCtrl, navCtrl, navParams, storage) {
+    function SettingsPage(toastCtrl, statsProvider, navCtrl, navParams, storage) {
         var _this = this;
         this.toastCtrl = toastCtrl;
+        this.statsProvider = statsProvider;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.storage = storage;
@@ -63,25 +69,28 @@ var SettingsPage = (function () {
     };
     SettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-settings',template:/*ion-inline-start:"/Users/emulgator/Documents/iFornite/ionic_fornite/src/pages/settings/settings.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Settings</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-grid class="searchBar">\n    <ion-row class="searchRow">\n      <ion-col width-100>\n        <form (ngSubmit)="saveForm()">\n          <ion-item>\n          <ion-label stacked class="searchLabel">\n            Nickname\n          </ion-label>\n          <ion-input class="searchForm" [(ngModel)]="nickname" name="nickname" type="text" stacked></ion-input>\n          </ion-item>\n          <button ion-button type="submit" color="light" (click)="presentToast()" light block>Update nickname</button>\n        </form>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/emulgator/Documents/iFornite/ionic_fornite/src/pages/settings/settings.html"*/,
+            selector: 'page-settings',template:/*ion-inline-start:"C:\Users\winds\Desktop\ionic_fornite\sidemenu\src\pages\settings\settings.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Settings</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content no-bounce>\n\n  <ion-grid class="searchBar">\n\n    <ion-row class="searchRow">\n\n      <ion-col width-100>\n\n        <form (ngSubmit)="saveForm()">\n\n          <ion-item>\n\n          <ion-label stacked class="searchLabel">\n\n            Nickname\n\n          </ion-label>\n\n          <ion-input class="searchForm" [(ngModel)]="nickname" name="nickname" type="text" stacked></ion-input>\n\n          </ion-item>\n\n          <button ion-button type="submit" color="light" (click)="presentToast()" light block>Update nickname</button>\n\n        </form>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\winds\Desktop\ionic_fornite\sidemenu\src\pages\settings\settings.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_stats_stats__["a" /* StatsProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
     ], SettingsPage);
     return SettingsPage;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=settings.js.map
 
 /***/ }),
 
-/***/ 103:
+/***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -109,9 +118,9 @@ var AboutPage = (function () {
     };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"/Users/emulgator/Documents/iFornite/ionic_fornite/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>About</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-grid>\n    <ion-row>\n      <ion-col width-100>\n        <ion-list>\n          <ion-item>\n            <strong>App Name: </strong> iFornite\n          </ion-item>\n          <ion-item>\n            <strong>Version: </strong> 0.0.1\n          </ion-item>\n          <ion-item>\n            <strong>Description: </strong> Fornite stats\n          </ion-item>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/emulgator/Documents/iFornite/ionic_fornite/src/pages/about/about.html"*/,
+            selector: 'page-about',template:/*ion-inline-start:"C:\Users\winds\Desktop\ionic_fornite\sidemenu\src\pages\about\about.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>About</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-grid>\n    <ion-row>\n      <ion-col width-100>\n        <ion-list>\n          <ion-item>\n            <strong>App Name: </strong> iFornite\n          </ion-item>\n          <ion-item>\n            <strong>Version: </strong> 0.0.1\n          </ion-item>\n          <ion-item>\n            <strong>Description: </strong> Fornite stats\n          </ion-item>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"C:\Users\winds\Desktop\ionic_fornite\sidemenu\src\pages\about\about.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], AboutPage);
     return AboutPage;
 }());
@@ -120,7 +129,7 @@ var AboutPage = (function () {
 
 /***/ }),
 
-/***/ 115:
+/***/ 116:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -133,20 +142,20 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 115;
+webpackEmptyAsyncContext.id = 116;
 
 /***/ }),
 
-/***/ 156:
+/***/ 157:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/about/about.module": [
-		288,
+		291,
 		1
 	],
 	"../pages/settings/settings.module": [
-		287,
+		290,
 		0
 	]
 };
@@ -161,20 +170,20 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 156;
+webpackAsyncContext.id = 157;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 201:
+/***/ 203:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_stats_stats__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_stats_stats__ = __webpack_require__(80);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -188,15 +197,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var HomePage = (function () {
-    function HomePage(navCtrl, statsProvider, storage) {
+    function HomePage(navCtrl, toastCtrl, statsProvider, loadingCtrl, storage) {
         this.navCtrl = navCtrl;
+        this.toastCtrl = toastCtrl;
         this.statsProvider = statsProvider;
+        this.loadingCtrl = loadingCtrl;
         this.storage = storage;
+        this.loading = this.loadingCtrl.create({
+            spinner: 'ios',
+            content: 'Loading... Please wait',
+            duration: 2000
+        });
         this.mode = 'solo';
+        this.isLoading = false;
     }
     HomePage.prototype.ionViewWillEnter = function () {
         var _this = this;
+        this.loading.present();
         this.storage.get('nickname').then(function (val) {
             if (val != null) {
                 _this.nickname = val;
@@ -206,82 +226,50 @@ var HomePage = (function () {
                 _this.nickname = 'Emulgator';
                 console.log('2');
             }
-            _this.statsProvider.getStats(_this.nickname).subscribe(function (stats) {
+            _this.statsProvider.getStats(_this.nickname)
+                .subscribe(function (stats) {
                 _this.stats = stats;
                 console.log(stats);
+                _this.error = false;
+            }, function (err) {
+                console.log('Error occured');
+                _this.presentToast();
+                _this.error = true;
+                console.log(_this.error);
+            }, function () {
+                _this.loading.dismiss();
             });
         });
     };
+    HomePage.prototype.presentToast = function () {
+        var toast = this.toastCtrl.create({
+            message: 'Incorrect nickname, try again',
+            duration: 3000,
+            position: 'top'
+        });
+        toast.present();
+    };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/emulgator/Documents/iFornite/ionic_fornite/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>iFornite</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<!-- segments -->\n<ion-toolbar no-border-top class="toolbarMode">\n  <ion-segment [(ngModel)]="mode">\n    <ion-segment-button value="solo">\n      Solo\n    </ion-segment-button>\n    <ion-segment-button value="duo">\n      Duo\n    </ion-segment-button>\n    <ion-segment-button value="squad">\n      Squad\n    </ion-segment-button>\n  </ion-segment>\n</ion-toolbar>\n<ion-content padding class="card-background-page" *ngIf="stats" no-bounce>\n\n  <!-- first card -->\n  <ion-card class="mainCard">\n    <img src="img/card1transparent.png" />\n    <div class="card-title">{{stats.displayName}}</div>\n    <div class="card-subtitle">Wins: {{stats.br.stats.pc.all.wins}}</div>\n    <div class="card-subtitle kdratio">K/D ratio: {{stats.br.stats.pc.all.kpd}}</div>\n    <div class="card-subtitle matchesPlayed">Matches played: {{stats.br.stats.pc.all.matchesPlayed}}</div>\n    <div class="accountLevel">{{stats.br.profile.level}}</div>\n    <div class="accountLevel accountLevel2">Account level</div>\n  </ion-card>\n\n\n  <!-- solo stats card -->\n  <div [ngSwitch]="mode">\n    <ion-card class="soloCard" *ngSwitchCase="\'solo\'">\n      <img src="img/card2transparent.png" />\n      <div class="top3container">\n      <div class="card-title">Solo</div>\n      <ion-grid class="top3">\n          <ion-row class="winRow">\n            <ion-col>\n              <div class="top3title">Wins:</div>\n              <div class="top3div">{{stats.br.stats.pc.squad.wins}}</div>\n            </ion-col>\n            <ion-col>\n              <div class="top3title">Top 3:</div>\n              <div class="top3div">{{stats.br.stats.pc.squad.top3}}</div>\n            </ion-col>\n            <ion-col>\n              <div class="top3title">Top 6:</div>\n              <div class="top3div">{{stats.br.stats.pc.squad.top6}}</div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n    </div>\n      <ion-grid class="soloStats">\n        <ion-row class="firstLineSolo">\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/killicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.kills}}</div>\n            <div class="iconDesc">Kills</div>\n          </ion-col>\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/deathicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.deaths}}</div>\n            <div class="iconDesc">Deaths</div>\n          </ion-col>\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/percentageicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.kpd}}</div>\n            <div class="iconDesc">K/D ratio</div>\n          </ion-col>\n        </ion-row>\n        <ion-row class="secondLineSolo">\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/matchesicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.matchesPlayed}}</div>\n            <div class="iconDesc">Matches</div>\n          </ion-col>\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/ratioicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.winRate}} %</div>\n            <div class="iconDesc">Win ratio</div>\n          </ion-col>\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/minutesicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.minutesPlayed}}</div>\n            <div class="iconDesc">Minutes played</div>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-card>\n\n    <!-- duo stats card -->\n    <ion-card class="soloCard" *ngSwitchCase="\'duo\'">\n      <img src="img/card2transparent.png" />\n      <div class="card-title">Duo</div>\n      <ion-grid class="top3">\n          <ion-row class="winRow">\n            <ion-col>\n              <div class="top3title">Wins:</div>\n              <div class="top3div">{{stats.br.stats.pc.squad.wins}}</div>\n            </ion-col>\n            <ion-col>\n              <div class="top3title">Top 3:</div>\n              <div class="top3div">{{stats.br.stats.pc.squad.top3}}</div>\n            </ion-col>\n            <ion-col>\n              <div class="top3title">Top 6:</div>\n              <div class="top3div">{{stats.br.stats.pc.squad.top6}}</div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      <ion-grid class="soloStats">\n        <ion-row class="firstLineSolo">\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/killicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.kills}}</div>\n            <div class="iconDesc">Kills</div>\n          </ion-col>\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/deathicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.deaths}}</div>\n            <div class="iconDesc">Deaths</div>\n          </ion-col>\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/percentageicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.kpd}}</div>\n            <div class="iconDesc">K/D ratio</div>\n          </ion-col>\n        </ion-row>\n        <ion-row class="secondLineSolo">\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/matchesicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.matchesPlayed}}</div>\n            <div class="iconDesc">Matches</div>\n          </ion-col>\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/ratioicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.winRate}} %</div>\n            <div class="iconDesc">Win ratio</div>\n          </ion-col>\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/minutesicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.minutesPlayed}}</div>\n            <div class="iconDesc">Minutes played</div>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-card>\n\n    <!-- squad stats card -->\n    <ion-card class="soloCard" *ngSwitchCase="\'squad\'">\n      <img src="img/card2transparent.png" />\n      <div class="card-title">Squad</div>\n      <ion-grid class="top3">\n        <ion-row class="winRow">\n          <ion-col>\n            <div class="top3title">Wins:</div>\n            <div class="top3div">{{stats.br.stats.pc.squad.wins}}</div>\n          </ion-col>\n          <ion-col>\n            <div class="top3title">Top 3:</div>\n            <div class="top3div">{{stats.br.stats.pc.squad.top3}}</div>\n          </ion-col>\n          <ion-col>\n            <div class="top3title">Top 6:</div>\n            <div class="top3div">{{stats.br.stats.pc.squad.top6}}</div>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n      <ion-grid class="soloStats">\n        <ion-row class="firstLineSolo">\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/killicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.kills}}</div>\n            <div class="iconDesc">Kills</div>\n          </ion-col>\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/deathicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.deaths}}</div>\n            <div class="iconDesc">Deaths</div>\n          </ion-col>\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/percentageicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.kpd}}</div>\n            <div class="iconDesc">K/D ratio</div>\n          </ion-col>\n        </ion-row>\n        <ion-row class="secondLineSolo">\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/matchesicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.matchesPlayed}}</div>\n            <div class="iconDesc">Matches</div>\n          </ion-col>\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/ratioicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.winRate}} %</div>\n            <div class="iconDesc">Win ratio</div>\n          </ion-col>\n          <ion-col>\n            <div class="iconContainer">\n              <img class="svgIcon" src="img/minutesicon.svg">\n            </div>\n            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.minutesPlayed}}</div>\n            <div class="iconDesc">Minutes played</div>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-card>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/emulgator/Documents/iFornite/ionic_fornite/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\winds\Desktop\ionic_fornite\sidemenu\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>iFornite</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<!-- segments -->\n\n<ion-toolbar no-border-top class="toolbarMode">\n\n  <ion-segment [(ngModel)]="mode">\n\n    <ion-segment-button value="solo">\n\n      Solo\n\n    </ion-segment-button>\n\n    <ion-segment-button value="duo">\n\n      Duo\n\n    </ion-segment-button>\n\n    <ion-segment-button value="squad">\n\n      Squad\n\n    </ion-segment-button>\n\n  </ion-segment>\n\n</ion-toolbar>\n\n\n\n<ion-content class="card-background-page" no-bounce>\n\n\n\n</ion-content>\n\n\n\n<ion-content class="card-background-page" no-bounce *ngIf="error === true">\n\n    <ion-card class="errorCard" style="height:10em">\n\n        <img src="img/card1transparentError.png" />\n\n        <div class="errorTitle">Error. Try again</div>\n\n      </ion-card>\n\n</ion-content>\n\n\n\n<ion-content padding class="card-background-page no-scroll" *ngIf="stats" no-bounce>\n\n\n\n  <!-- first card -->\n\n  <ion-card class="mainCard" style="height:10em">\n\n    <img src="img/card1transparent.png" />\n\n    <div class="card-title">{{stats.displayName}}</div>\n\n    <div class="card-subtitle">Wins: {{stats.br.stats.pc.all.wins}}</div>\n\n    <div class="card-subtitle kdratio">K/D ratio: {{stats.br.stats.pc.all.kpd}}</div>\n\n    <div class="card-subtitle matchesPlayed">Matches played: {{stats.br.stats.pc.all.matchesPlayed}}</div>\n\n    <div class="accountLevel">{{stats.br.profile.level}}</div>\n\n    <div class="accountLevel accountLevel2">Account level</div>\n\n  </ion-card>\n\n\n\n  <!-- solo stats card -->\n\n  <div [ngSwitch]="mode">\n\n    <ion-card class="soloCard" *ngSwitchCase="\'solo\'" style="height:25em">\n\n      <img src="img/card2transparent.png" />\n\n      <div class="top3container">\n\n        <div class="card-title">Solo</div>\n\n        <ion-grid class="top3">\n\n          <ion-row class="winRow">\n\n            <ion-col>\n\n              <div class="top3title">Wins:</div>\n\n              <div class="top3div">{{stats.br.stats.pc.squad.wins}}</div>\n\n            </ion-col>\n\n            <ion-col>\n\n              <div class="top3title">Top 3:</div>\n\n              <div class="top3div">{{stats.br.stats.pc.squad.top3}}</div>\n\n            </ion-col>\n\n            <ion-col>\n\n              <div class="top3title">Top 6:</div>\n\n              <div class="top3div">{{stats.br.stats.pc.squad.top6}}</div>\n\n            </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n      </div>\n\n      <ion-grid class="soloStats">\n\n        <ion-row class="firstLineSolo">\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/killicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.kills}}</div>\n\n            <div class="iconDesc">Kills</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/deathicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.deaths}}</div>\n\n            <div class="iconDesc">Deaths</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/percentageicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.kpd}}</div>\n\n            <div class="iconDesc">K/D ratio</div>\n\n          </ion-col>\n\n        </ion-row>\n\n        <ion-row class="secondLineSolo">\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/matchesicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.matchesPlayed}}</div>\n\n            <div class="iconDesc">Matches</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/ratioicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.winRate}} %</div>\n\n            <div class="iconDesc">Win ratio</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/minutesicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.solo.minutesPlayed}}</div>\n\n            <div class="iconDesc">Minutes played</div>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid>\n\n    </ion-card>\n\n\n\n    <!-- duo stats card -->\n\n    <ion-card class="soloCard" *ngSwitchCase="\'duo\'" style="height:25em">\n\n      <img src="img/card2transparent.png" />\n\n      <div class="card-title">Duo</div>\n\n      <ion-grid class="top3">\n\n        <ion-row class="winRow">\n\n          <ion-col>\n\n            <div class="top3title">Wins:</div>\n\n            <div class="top3div">{{stats.br.stats.pc.squad.wins}}</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="top3title">Top 3:</div>\n\n            <div class="top3div">{{stats.br.stats.pc.squad.top3}}</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="top3title">Top 6:</div>\n\n            <div class="top3div">{{stats.br.stats.pc.squad.top6}}</div>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid>\n\n      <ion-grid class="soloStats">\n\n        <ion-row class="firstLineSolo">\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/killicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.kills}}</div>\n\n            <div class="iconDesc">Kills</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/deathicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.deaths}}</div>\n\n            <div class="iconDesc">Deaths</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/percentageicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.kpd}}</div>\n\n            <div class="iconDesc">K/D ratio</div>\n\n          </ion-col>\n\n        </ion-row>\n\n        <ion-row class="secondLineSolo">\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/matchesicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.matchesPlayed}}</div>\n\n            <div class="iconDesc">Matches</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/ratioicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.winRate}} %</div>\n\n            <div class="iconDesc">Win ratio</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/minutesicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.duo.minutesPlayed}}</div>\n\n            <div class="iconDesc">Minutes played</div>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid>\n\n    </ion-card>\n\n\n\n    <!-- squad stats card -->\n\n    <ion-card class="soloCard" *ngSwitchCase="\'squad\'" style="height:25em">\n\n      <img src="img/card2transparent.png" />\n\n      <div class="card-title">Squad</div>\n\n      <ion-grid class="top3">\n\n        <ion-row class="winRow">\n\n          <ion-col>\n\n            <div class="top3title">Wins:</div>\n\n            <div class="top3div">{{stats.br.stats.pc.squad.wins}}</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="top3title">Top 3:</div>\n\n            <div class="top3div">{{stats.br.stats.pc.squad.top3}}</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="top3title">Top 6:</div>\n\n            <div class="top3div">{{stats.br.stats.pc.squad.top6}}</div>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid>\n\n      <ion-grid class="soloStats">\n\n        <ion-row class="firstLineSolo">\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/killicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.kills}}</div>\n\n            <div class="iconDesc">Kills</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/deathicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.deaths}}</div>\n\n            <div class="iconDesc">Deaths</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/percentageicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.kpd}}</div>\n\n            <div class="iconDesc">K/D ratio</div>\n\n          </ion-col>\n\n        </ion-row>\n\n        <ion-row class="secondLineSolo">\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/matchesicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.matchesPlayed}}</div>\n\n            <div class="iconDesc">Matches</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/ratioicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.winRate}} %</div>\n\n            <div class="iconDesc">Win ratio</div>\n\n          </ion-col>\n\n          <ion-col>\n\n            <div class="iconContainer">\n\n              <img class="svgIcon" src="img/minutesicon.svg">\n\n            </div>\n\n            <div class="soloStatsdiv">{{stats.br.stats.pc.squad.minutesPlayed}}</div>\n\n            <div class="iconDesc">Minutes played</div>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid>\n\n    </ion-card>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\winds\Desktop\ionic_fornite\sidemenu\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__providers_stats_stats__["a" /* StatsProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_stats_stats__["a" /* StatsProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_stats_stats__["a" /* StatsProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_stats_stats__["a" /* StatsProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _e || Object])
     ], HomePage);
     return HomePage;
-    var _a, _b, _c;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=home.js.map
 
 /***/ }),
 
-/***/ 202:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StatsProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/*
-  Generated class for the StatsProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-var StatsProvider = (function () {
-    function StatsProvider(http) {
-        this.http = http;
-        this.url = 'https://fortnite.y3n.co/v2/player/';
-        this.apiKey = 'tlisV9TFbCqkwsYOnTfq';
-        console.log('Hello StatsProvider Provider');
-    }
-    StatsProvider.prototype.getStats = function (nickname) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]().set('X-Key', this.apiKey);
-        return this.http.get(this.url + nickname, { headers: headers });
-    };
-    StatsProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
-    ], StatsProvider);
-    return StatsProvider;
-}());
-
-//# sourceMappingURL=stats.js.map
-
-/***/ }),
-
-/***/ 203:
+/***/ 204:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(226);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -289,25 +277,25 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 225:
+/***/ 226:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(270);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(276);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_list_list__ = __webpack_require__(286);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_settings_settings__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_about_about__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_stats_stats__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_list_list__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_settings_settings__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_about_about__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_stats_stats__ = __webpack_require__(80);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -375,18 +363,18 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 276:
+/***/ 280:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_settings_settings__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_about_about__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_settings_settings__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_about_about__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -432,13 +420,13 @@ var MyApp = (function () {
         this.nav.setRoot(page.component);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/emulgator/Documents/iFornite/ionic_fornite/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/emulgator/Documents/iFornite/ionic_fornite/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\winds\Desktop\ionic_fornite\sidemenu\src\app\app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Users\winds\Desktop\ionic_fornite\sidemenu\src\app\app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
@@ -447,13 +435,13 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 286:
+/***/ 289:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -492,9 +480,9 @@ var ListPage = (function () {
     };
     ListPage = ListPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list',template:/*ion-inline-start:"/Users/emulgator/Documents/iFornite/ionic_fornite/src/pages/list/list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>List</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n  <div *ngIf="selectedItem" padding>\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/emulgator/Documents/iFornite/ionic_fornite/src/pages/list/list.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"C:\Users\winds\Desktop\ionic_fornite\sidemenu\src\pages\list\list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>List</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n  <div *ngIf="selectedItem" padding>\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\winds\Desktop\ionic_fornite\sidemenu\src\pages\list\list.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], ListPage);
     return ListPage;
     var ListPage_1;
@@ -502,7 +490,60 @@ var ListPage = (function () {
 
 //# sourceMappingURL=list.js.map
 
+/***/ }),
+
+/***/ 80:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StatsProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/*
+  Generated class for the StatsProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var StatsProvider = (function () {
+    function StatsProvider(http) {
+        this.http = http;
+        this.url = 'https://fortnite.y3n.co/v2/player/';
+        this.apiKey = 'tlisV9TFbCqkwsYOnTfq';
+        console.log('Hello StatsProvider Provider');
+    }
+    StatsProvider.prototype.getStats = function (nickname) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]().set('X-Key', this.apiKey);
+        return this.http.get(this.url + nickname, { headers: headers });
+    };
+    StatsProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+    ], StatsProvider);
+    return StatsProvider;
+    var _a;
+}());
+
+//# sourceMappingURL=stats.js.map
+
 /***/ })
 
-},[203]);
+},[204]);
 //# sourceMappingURL=main.js.map

@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { ToastController } from 'ionic-angular';
+import { Observable } from "rxjs/Rx";
+import 'rxjs/add/operator/catch';
+
+
+import { StatsProvider } from '../../providers/stats/stats';
 
 import { HomePage } from '../home/home';
 /**
@@ -19,9 +24,12 @@ import { HomePage } from '../home/home';
 export class SettingsPage {
 
   nickname: string;
+  stats: any;
+  error: any;
 
   constructor(
     public toastCtrl: ToastController,
+    private statsProvider:StatsProvider, 
     public navCtrl: NavController, 
     public navParams: NavParams, 
     private storage:Storage) {
