@@ -80,17 +80,17 @@ ion-card {
 .top3div {
     margin-top: 0.1em;
     font-size: 1.2em;
-    color: white;
+    color: #FEFF53;
 }
 
 .top3title {
     font-size: 1.3em;
-    color: yellow;
+    color: white;
 }
 
 .soloStats {
     position: absolute;
-    color: #fff;
+    color: #FEFF53;
     font-size: 1.2em;
     top: 5.5em;
     text-align: center;
@@ -122,11 +122,13 @@ ion-card {
 }
 
 .firstLineSolo {
-    margin-top: 5.5em;
+    margin-top: 6.5em;
+    color: #FEFF53;
 }
 
 .secondLineSolo {
-    margin-top: 3em;
+    margin-top: 2em;
+    color: #FEFF53;
 }
 
 .toolbarMode {

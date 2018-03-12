@@ -4,7 +4,6 @@ import { ToastController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 
 import { Storage } from '@ionic/storage';
-
 import { StatsProvider } from '../../providers/stats/stats';
 
 @Component({
@@ -19,7 +18,7 @@ export class HomePage {
 
   loading = this.loadingCtrl.create({
     spinner: 'ios',
-    content: 'Loading... Please wait',
+    content: 'Loading data... Please wait',
     duration: 2000
   });
 
@@ -39,10 +38,8 @@ export class HomePage {
     this.storage.get('nickname').then((val) => {
       if(val != null) {
         this.nickname = val;
-        console.log('1');
       } else {
         this.nickname = 'Emulgator';
-        console.log('2');
       }
 
       this.statsProvider.getStats(this.nickname)
@@ -70,7 +67,7 @@ export class HomePage {
   presentToast() {
     let toast = this.toastCtrl.create({
       message: 'Incorrect nickname, try again',
-      duration: 3000,
+      duration: 2000,
       position: 'top'
     });
     toast.present();

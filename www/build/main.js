@@ -208,7 +208,7 @@ var HomePage = (function () {
         this.storage = storage;
         this.loading = this.loadingCtrl.create({
             spinner: 'ios',
-            content: 'Loading... Please wait',
+            content: 'Loading data... Please wait',
             duration: 2000
         });
         this.mode = 'solo';
@@ -220,11 +220,9 @@ var HomePage = (function () {
         this.storage.get('nickname').then(function (val) {
             if (val != null) {
                 _this.nickname = val;
-                console.log('1');
             }
             else {
                 _this.nickname = 'Emulgator';
-                console.log('2');
             }
             _this.statsProvider.getStats(_this.nickname)
                 .subscribe(function (stats) {
@@ -244,7 +242,7 @@ var HomePage = (function () {
     HomePage.prototype.presentToast = function () {
         var toast = this.toastCtrl.create({
             message: 'Incorrect nickname, try again',
-            duration: 3000,
+            duration: 2000,
             position: 'top'
         });
         toast.present();
