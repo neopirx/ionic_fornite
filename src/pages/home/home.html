@@ -1,3 +1,4 @@
+<!-- app header -->
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
@@ -22,15 +23,17 @@
   </ion-segment>
 </ion-toolbar>
 
+<!-- default background -->
 <ion-content class="card-background-page" no-bounce>
 
 </ion-content>
 
+<!-- when error --> 
 <ion-content class="card-background-page" no-bounce *ngIf="error === true">
-    <ion-card class="errorCard" style="height:10em">
-        <img src="img/card1transparentError.png" />
-        <div class="errorTitle">Error. Try again</div>
-      </ion-card>
+  <ion-card class="errorCard" style="height:10em">
+    <img src="img/card1transparentError.png" />
+    <div class="errorTitle">Error. Try again</div>
+  </ion-card>
 </ion-content>
 
 <ion-content padding class="card-background-page no-scroll" *ngIf="stats" no-bounce>
@@ -56,15 +59,15 @@
           <ion-row class="winRow">
             <ion-col>
               <div class="top3title">Wins:</div>
-              <div class="top3div">{{stats.br.stats.pc.squad.wins}}</div>
+              <div class="top3div">{{stats.br.stats.pc.solo.wins}}</div>
             </ion-col>
             <ion-col>
-              <div class="top3title">Top 3:</div>
-              <div class="top3div">{{stats.br.stats.pc.squad.top3}}</div>
+              <div class="top3title">Top 10:</div>
+              <div class="top3div">{{stats.br.stats.pc.solo.top10}}</div>
             </ion-col>
             <ion-col>
-              <div class="top3title">Top 6:</div>
-              <div class="top3div">{{stats.br.stats.pc.squad.top6}}</div>
+              <div class="top3title">Top 25:</div>
+              <div class="top3div">{{stats.br.stats.pc.solo.top25}}</div>
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -127,15 +130,15 @@
         <ion-row class="winRow">
           <ion-col>
             <div class="top3title">Wins:</div>
-            <div class="top3div">{{stats.br.stats.pc.squad.wins}}</div>
+            <div class="top3div">{{stats.br.stats.pc.duo.wins}}</div>
           </ion-col>
           <ion-col>
-            <div class="top3title">Top 3:</div>
-            <div class="top3div">{{stats.br.stats.pc.squad.top3}}</div>
+            <div class="top3title">Top 5:</div>
+            <div class="top3div">{{stats.br.stats.pc.duo.top5}}</div>
           </ion-col>
           <ion-col>
-            <div class="top3title">Top 6:</div>
-            <div class="top3div">{{stats.br.stats.pc.squad.top6}}</div>
+            <div class="top3title">Top 12:</div>
+            <div class="top3div">{{stats.br.stats.pc.duo.top12}}</div>
           </ion-col>
         </ion-row>
       </ion-grid>
