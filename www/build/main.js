@@ -412,7 +412,7 @@ var MyApp = (function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
             _this.statusBar.styleDefault();
-            _this.splashScreen.hide();
+            //this.splashScreen.hide();
         });
     };
     MyApp.prototype.openPage = function (page) {
