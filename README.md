@@ -11,9 +11,10 @@ Simple mobile application that displays user stats from recently popular Battle 
 * Install ionic and cordova ``` npm install -g cordova ionic ```
 * Run  ``` ionic serve ``` in a terminal from a project root
 * Check the app out on your mobile device
-* Profit 
+* Profit :sunglasses:
 
 ## App Preview
-
-## File Structure of App
+![Loading Screen](/images/sc1.png)
+![Main view](/images/sc2.png)
+![Side menu](/images/sc3.png)
 
