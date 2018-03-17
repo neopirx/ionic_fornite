@@ -18,7 +18,7 @@ Simple mobile application that displays user stats from recently popular Battle 
 ![Main view](/images/sc2.png)
 ![Side menu](/images/sc3.png) -->
 <p float="left">
-  <img src="/images/sc1.png" width="100" />
-  <img src="/images/sc2.png" width="100" /> 
-  <img src="/images/sc2.png" width="100" />
+  <img src="/images/sc1.png" width="250" />
+  <img src="/images/sc2.png" width="250" /> 
+  <img src="/images/sc2.png" width="250" />
 </p>
