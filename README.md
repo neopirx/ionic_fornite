@@ -8,8 +8,8 @@ Simple mobile application that displays user stats from recently popular Battle 
 
 ## Getting Started
 * Clone this repository: https://github.com/neopirx/ionic_fornite.git
-* Install ionic and cordova npm install -g cordova ionic
-* Run ionic serve in a terminal from a project root
+* Install ionic and cordova ``` npm install -g cordova ionic ```
+* Run  ``` ionic serve ``` in a terminal from a project root
 * Check the app out on your mobile device
 * Profit 
 
